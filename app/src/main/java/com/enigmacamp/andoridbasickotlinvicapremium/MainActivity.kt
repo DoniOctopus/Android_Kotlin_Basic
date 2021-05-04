@@ -3,6 +3,7 @@ package com.enigmacamp.andoridbasickotlinvicapremium
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.google.android.material.textfield.TextInputEditText
 
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        Log.i("MAINACTIVITY","OnCreate")
         userNameText = findViewById(R.id.username_text_input)
     }
 
@@ -26,5 +27,33 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(USER_NAME,userNameText.text.toString())
         //staractivity untuk melakukan atau membuat activity baru
         startActivity(intent)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("MAINACTIVITY","OnStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("MAINACTIVITY","OnResume")
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("MAINACTIVITY","OnPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("MAINACTIVITY","OnStop")
+
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("MAINACTIVITY","OnRestart")
+
     }
 }
