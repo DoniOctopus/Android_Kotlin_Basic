@@ -6,13 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+  <LinearLayout
+      android:id="@+id/Linear1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="16dp"
+      tools:ignore="MissingConstraints" >
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/increase_bottom"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:layout_weight="1"
+          android:onClick="increase"
+          tools:ignore="OnClick"
+          android:text="+"
+          android:textAlignment="center"
+          android:textSize="20sp"/>
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/decrease_bottom"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:layout_weight="1"
+          android:onClick="decrease"
+          tools:ignore="OnClick"
+          android:text="-"
+          android:textAlignment="center"
+          android:textSize="20sp"/>
+  </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Linear1">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="70dp"/>
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
