@@ -51,6 +51,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_text_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -64,8 +65,10 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_200"
             android:text="LOGIN"
+            android:onClick="movetoSecondActivity"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="OnClick" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
